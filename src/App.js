@@ -1,67 +1,25 @@
 import React from 'react';
-import logoSvg from './assets/img/pizza-logo.svg';
 
-function App() {
+import Header from './Header';
+import Button from './Button';
+
+const App = () => {
   return (
     <div className="wrapper">
-      <div className="header">
-        <div className="container">
-          <div className="header__logo">
-            <img width="38" src={logoSvg} alt="Pizza logo" />
-            <div>
-              <h1>React Pizza</h1>
-              <p>самая вкусная пицца во вселенной</p>
-            </div>
-          </div>
-          <div className="header__cart">
-            <a href="/cart.html" className="button button--cart">
-              <span>520 ₽</span>
-              <div className="button__delimiter"></div>
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.33333 16.3333C7.06971 16.3333 7.66667 15.7364 7.66667 15C7.66667 14.2636 7.06971 13.6667 6.33333 13.6667C5.59695 13.6667 5 14.2636 5 15C5 15.7364 5.59695 16.3333 6.33333 16.3333Z"
-                  stroke="white"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M14.3333 16.3333C15.0697 16.3333 15.6667 15.7364 15.6667 15C15.6667 14.2636 15.0697 13.6667 14.3333 13.6667C13.597 13.6667 13 14.2636 13 15C13 15.7364 13.597 16.3333 14.3333 16.3333Z"
-                  stroke="white"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M4.78002 4.99999H16.3334L15.2134 10.5933C15.1524 10.9003 14.9854 11.176 14.7417 11.3722C14.4979 11.5684 14.1929 11.6727 13.88 11.6667H6.83335C6.50781 11.6694 6.1925 11.553 5.94689 11.3393C5.70128 11.1256 5.54233 10.8295 5.50002 10.5067L4.48669 2.82666C4.44466 2.50615 4.28764 2.21182 4.04482 1.99844C3.80201 1.78505 3.48994 1.66715 3.16669 1.66666H1.66669"
-                  stroke="white"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span>3</span>
-            </a>
-          </div>
-        </div>
-      </div>
+      <Header />
+      <Button outline>Кнопка</Button>
+      <Button>123</Button>
       <div className="content">
         <div className="container">
           <div className="content__top">
             <div className="categories">
               <ul>
-                <li className="active">Все</li>
-                <li>Мясные</li>
-                <li>Вегетарианская</li>
+                <li className="active">Всі</li>
+                <li>Мясні</li>
+                <li>Вегетаріанскі</li>
                 <li>Гриль</li>
-                <li>Острые</li>
-                <li>Закрытые</li>
+                <li>Гострі</li>
+                <li>Закриті</li>
               </ul>
             </div>
             <div className="sort">
@@ -78,19 +36,19 @@ function App() {
                     fill="#2C2C2C"
                   />
                 </svg>
-                <b>Сортировка по:</b>
-                <span>популярности</span>
+                <b>Сортувати по:</b>
+                <span>популярності</span>
               </div>
               <div className="sort__popup">
                 <ul>
-                  <li className="active">популярности</li>
-                  <li>цене</li>
-                  <li>алфавиту</li>
+                  <li className="active">популярності</li>
+                  <li>ціні</li>
+                  <li>алфавіту</li>
                 </ul>
               </div>
             </div>
           </div>
-          <h2 className="content__title">Все пиццы</h2>
+          <h2 className="content__title">Всі піци</h2>
           <div className="content__items">
             <div className="pizza-block">
   <img
@@ -98,11 +56,11 @@ function App() {
     src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
     alt="Pizza"
   />
-  <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+  <h4 className="pizza-block__title">Чізбургер-піца</h4>
   <div className="pizza-block__selector">
     <ul>
-      <li className="active">тонкое</li>
-      <li>традиционное</li>
+      <li className="active">тонкі</li>
+      <li>традиційні</li>
     </ul>
     <ul>
       <li className="active">26 см.</li>
@@ -111,7 +69,7 @@ function App() {
     </ul>
   </div>
   <div className="pizza-block__bottom">
-    <div className="pizza-block__price">от 395 ₽</div>
+    <div className="pizza-block__price">від 125 ₴</div>
     <div className="button button--outline button--add">
       <svg
         width="12"
@@ -125,7 +83,7 @@ function App() {
           fill="white"
         />
       </svg>
-      <span>Добавить</span>
+      <span>Додати</span>
       <i>2</i>
     </div>
   </div>
@@ -135,11 +93,11 @@ function App() {
     src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
     alt="Pizza"
   />
-  <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+  <h4 className="pizza-block__title">Чізбургер-піца</h4>
   <div className="pizza-block__selector">
     <ul>
-      <li className="active">тонкое</li>
-      <li>традиционное</li>
+      <li className="active">тонкі</li>
+      <li>традиційні</li>
     </ul>
     <ul>
       <li className="active">26 см.</li>
