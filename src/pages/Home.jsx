@@ -9,7 +9,11 @@ const Home = ({ items }) => {
           onClickItem={(name) => console.log(name)}
           items={["Мясні", "Вегетаріанські", "Гриль", "Гострі", "Закриті"]}
         />
-        <SortPopup items={["популярності", "ціні", "алфавіту"]} />
+        <SortPopup items={[
+        {name: "популярності", type: "popular"}, 
+        {name: "ціні", type: "price"}, 
+        {name: "алфавіту", type: "alphabet"}
+        ]} />
       </div>
       <h2 className="content__title">Всі піци</h2>
       <div className="content__items">
